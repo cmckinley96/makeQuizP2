@@ -1,8 +1,6 @@
-/***********************************************************************
-	The implementation file for course.h, which describes a college
-	course.
-		John Dolan		School of EECS		Summer2013
-**************************************************************************/
+/**
+* @file course.cc for makequiz
+*/
 #include "course.h"
 #include<cstdlib>
 #include<iostream>
@@ -52,7 +50,10 @@ void course::output(std::ostream& outs)const{
       }
 }
 
-
+/*!
+*		menu function
+*   @return Returns double for gpa
+*/
 double course::get_number_grade()const{
     if(grade == "A") return 4.0;
     if(grade == "A-") return 3.667;
@@ -60,11 +61,11 @@ double course::get_number_grade()const{
     if(grade == "B") return 3.0;
     if(grade == "B-") return 2.667;
     if(grade == "C+") return 2.333;
-    if(grade == "C") return 2.0; 
+    if(grade == "C") return 2.0;
     if(grade == "C-") return 1.667;
-    if(grade == "D+") return 1.333; 
+    if(grade == "D+") return 1.333;
     if(grade == "D") return 1.0;
-    if(grade == "D-") return 0.667; 
+    if(grade == "D-") return 0.667;
     if(grade == "F") return 0.0;
     else return 0;
 }
